@@ -10,6 +10,7 @@ def calculate_economic_intuition(weeks_completed: int) -> str:
 
 
 def backtest_strategy(prices: list[float], signals: list[int]) -> float:
+    """Return the total return of a long/flat strategy based on daily signals."""
     capital = 1.0
     for i in range(1, len(prices)):
         daily_return = prices[i] / prices[i - 1] - 1
